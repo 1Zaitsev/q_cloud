@@ -1,0 +1,27 @@
+
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<VBox fx:controller="Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <HBox fx:id="listViews">
+        <VBox fx:id="clientSide" HBox.hgrow="ALWAYS">
+            <Label fx:id="clientLabel" text="CLIENT"/>
+            <ListView fx:id="clientFilesList"/>
+        </VBox>
+        <VBox fx:id="serverSide" HBox.hgrow="ALWAYS">
+            <Label fx:id="serverLabel" text="SERVER"/>
+            <ListView fx:id="serverFilesList"/>
+        </VBox>
+    </HBox>
+    <HBox fx:id="buttons">
+        <Button fx:id="upload" text="UPLOAD" onAction="#upload" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="download" text="DOWNLOAD" onAction="#download" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="refresh" text="REFRESH" onAction="#refresh" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="deleteFromClient" text="DELETE FROM CLIENT" onAction="#deleteFromClient" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="deleteFromServer" text="DELETE FROM SERVER" onAction="#deleteFromServer" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>
